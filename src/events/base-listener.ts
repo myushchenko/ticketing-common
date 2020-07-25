@@ -19,7 +19,6 @@ export abstract class Listener<T extends Event> {
         return this.client
             .subscriptionOptions()
             .setDeliverAllAvailable()
-            .setDeliverAllAvailable()
             .setManualAckMode(true)
             .setAckWait(this.ackWait)
             .setDurableName(this.queueGroupName);
